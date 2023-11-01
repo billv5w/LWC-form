@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DataType__c</fullName>
+    <externalId>false</externalId>
+    <label>Data Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DisplayRichText</fullName>
+                <default>false</default>
+                <label>Display Rich Text</label>
+            </value>
+            <value>
+                <fullName>DisplayText</fullName>
+                <default>false</default>
+                <label>Display Text</label>
+            </value>
+            <value>
+                <fullName>InputCheckbox</fullName>
+                <default>false</default>
+                <label>Input Checkbox</label>
+            </value>
+            <value>
+                <fullName>InputCurrency</fullName>
+                <default>false</default>
+                <label>Input Currency</label>
+            </value>
+            <value>
+                <fullName>InputDate</fullName>
+                <default>false</default>
+                <label>Input Date</label>
+            </value>
+            <value>
+                <fullName>InputDateTime</fullName>
+                <default>false</default>
+                <label>Input DateTime</label>
+            </value>
+            <value>
+                <fullName>InputEmail</fullName>
+                <default>false</default>
+                <label>Input Email</label>
+            </value>
+            <value>
+                <fullName>InputNumber</fullName>
+                <default>false</default>
+                <label>Input Number</label>
+            </value>
+            <value>
+                <fullName>InputPicklist</fullName>
+                <default>false</default>
+                <label>Input Picklist</label>
+            </value>
+            <value>
+                <fullName>InputCheckboxGroup</fullName>
+                <default>false</default>
+                <label>Input Checkbox Group</label>
+            </value>
+            <value>
+                <fullName>InputRadioGroup</fullName>
+                <default>false</default>
+                <label>Input Radio Group</label>
+            </value>
+            <value>
+                <fullName>InputTelephone</fullName>
+                <default>false</default>
+                <label>Input Telephone</label>
+            </value>
+            <value>
+                <fullName>InputText</fullName>
+                <default>false</default>
+                <label>Input Text</label>
+            </value>
+            <value>
+                <fullName>InputTextArea</fullName>
+                <default>false</default>
+                <label>Input Text Area</label>
+            </value>
+            <value>
+                <fullName>InputTime</fullName>
+                <default>false</default>
+                <label>Input Time</label>
+            </value>
+            <value>
+                <fullName>InputUrl</fullName>
+                <default>false</default>
+                <label>Input URL</label>
+            </value>
+            <value>
+                <fullName>InputFile</fullName>
+                <default>false</default>
+                <label>Input File</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

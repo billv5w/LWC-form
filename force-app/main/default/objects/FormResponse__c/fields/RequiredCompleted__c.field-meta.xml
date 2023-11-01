@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequiredCompleted__c</fullName>
+    <externalId>false</externalId>
+    <formula>RequiredAnswers__c = RequiredQuestions__c</formula>
+    <label>Required Completed</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

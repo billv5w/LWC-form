@@ -1,0 +1,76 @@
+<template>
+  <template lwc:if={isDisplay}>
+    <c-question-display
+      record-id={recordId}
+      form-id={formId}
+      detail={question}
+      class={inputDisplayClass}
+    ></c-question-display>
+  </template>
+
+  <template lwc:if={isInput}>
+    <c-question-input
+      lwc:ref="input"
+      record-id={recordId}
+      form-id={formId}
+      detail={question}
+      read-only={readOnly}
+      class={inputDisplayClass}
+    ></c-question-input>
+  </template>
+
+  <template lwc:if={isSelect}>
+    <c-question-select
+      lwc:ref="input"
+      record-id={recordId}
+      form-id={formId}
+      detail={question}
+      read-only={readOnly}
+      class={inputDisplayClass}
+    ></c-question-select>
+  </template>
+
+  <!-- <template lwc:if={isInputDatatable}>
+    <c-question-datatable
+      lwc:ref="input"
+      record-id={recordId}
+      form-id={formId}
+      detail={question}
+      read-only={readOnly}
+      class={inputDisplayClass}
+    ></c-question-datatable>
+  </template>
+
+  <template lwc:if={isInputFile}>
+    <c-question-file
+      lwc:ref="input"
+      record-id={recordId}
+      form-id={formId}
+      detail={question}
+      read-only={readOnly}
+      class={inputDisplayClass}
+    ></c-question-file>
+  </template>
+
+  <template lwc:if={isInputFlow}>
+    <c-question-flow
+      lwc:ref="input"
+      record-id={recordId}
+      form-id={formId}
+      detail={question}
+      read-only={readOnly}
+      class={inputDisplayClass}
+    ></c-question-flow>
+  </template> -->
+
+  <!-- <template lwc:if={isInputRecordList}>
+    <c-question-record-list
+      lwc:ref="input"
+      record-id={recordId}
+      form-id={formId}
+      detail={question}
+      read-only={readOnly}
+      class={inputDisplayClass}
+    ></c-question-record-list>
+  </template> -->
+</template>

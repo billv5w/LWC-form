@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Response__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( TEXT(DataType__c) == &quot;InputCheckbox&quot;, IF(Required__c, IF(InputCheckbox__c,&quot;TRUE&quot;, &quot;&quot;), IF(InputCheckbox__c,&quot;TRUE&quot;, &quot;FALSE&quot;)), 
+IF( TEXT(DataType__c) == &quot;InputCurrency&quot;, TEXT(InputCurrency__c), 
+IF( TEXT(DataType__c) == &quot;InputDate&quot;, TEXT(InputDate__c),
+IF( TEXT(DataType__c) == &quot;InputDateTime&quot;, TEXT(InputDateTime__c), 
+IF( TEXT(DataType__c) == &quot;InputEmail&quot;, InputEmail__c, 
+IF( TEXT(DataType__c) == &quot;InputNumber&quot;, TEXT(InputNumber__c),
+IF( TEXT(DataType__c) == &quot;InputTelephone&quot;, InputText__c, 
+IF( TEXT(DataType__c) == &quot;InputText&quot;, InputText__c,
+IF( TEXT(DataType__c) == &quot;InputUrl&quot;, InputUrl__c, 
+IF( TEXT(DataType__c) == &quot;InputTime&quot;, TEXT(InputTime__c), 
+IF( TEXT(DataType__c) == &quot;InputPicklist&quot;, InputText__c,
+IF( TEXT(DataType__c) == &quot;InputRadioGroup&quot;, InputText__c,
+IF( TEXT(DataType__c) == &quot;InputCheckboxGroup&quot;, InputText__c, &quot;&quot;
+ )
+ )
+ )
+ )
+ )
+ )
+ ) 
+ )
+ )
+	)
+	)
+	)
+	)</formula>
+    <label>Response</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

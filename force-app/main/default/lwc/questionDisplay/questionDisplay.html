@@ -1,0 +1,14 @@
+<template>
+  <template lwc:if={displayRichText}>
+    <div class={displayClass}>
+      <lightning-formatted-rich-text
+        value={displayRichText}
+      ></lightning-formatted-rich-text>
+    </div>
+  </template>
+  <template lwc:if={displayText}>
+    <div class={displayClass}>
+      <lightning-formatted-text value={displayText}></lightning-formatted-text>
+    </div>
+  </template>
+</template>

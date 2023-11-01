@@ -1,0 +1,79 @@
+<template>
+  <template lwc:if={isLoading}>
+    <lightning-spinner
+      alternative-text="Loading"
+      size="large"
+      variant="inverse"
+      class="backgroundInverse"
+    ></lightning-spinner>
+  </template>
+
+  <div class="slds-form-element slds-box slds-text-align_left">
+    <div class="slds-text-heading_large">{formDisplayName}</div>
+    <br />
+
+    <div class="slds-text-body_regular">{displayDescription}</div>
+    <br />
+    <div
+      lwc:if={hasQuestions}
+      class="slds-form-element slds-box slds-text-align_left"
+    >
+      <lightning-layout multiple-rows>
+        <template for:each={questionResponses} for:item="detail">
+          <lightning-layout-item
+            key={detail.Id}
+            size="12"
+            small-device-size={detail.SmallDeviceSize__c}
+            medium-device-size={detail.MediumDeviceSize__c}
+            large-device-size={detail.LargeDeviceSize__c}
+            padding="around-small"
+          >
+            <c-form-question-type
+              record-id={recordId}
+              question={detail}
+              read-only={readOnly}
+              class={detail.DisplayClass__c}
+              ondetailchange={handleDetailChange}
+              onsave={handleSave}
+            ></c-form-question-type>
+          </lightning-layout-item>
+        </template>
+      </lightning-layout>
+    </div>
+    <br />
+    <template for:each={sections} for:item="section">
+      <div key={section.Id}>
+        <c-form-response
+          record-id={section.Id}
+          mode={section.ChildType__c}
+          cancel-button-label={cancelButtonLabel}
+          save-button-label={saveButtonLabel}
+          read-only={section.ReadOnly__c}
+          onrefresh={handleRefresh}
+          onloading={handleLoading}
+        ></c-form-response>
+        <br />
+      </div>
+    </template>
+    <lightning-layout horizontal-align="center">
+      <lightning-layout-item size="2">
+        <lightning-button
+          lwc:if={hasInput}
+          label="Save"
+          variant="white"
+          class="slds-button"
+          disabled={readOnly}
+          onclick={handleSave}
+        ></lightning-button>
+      </lightning-layout-item>
+      <lightning-layout-item size="2">
+        <lightning-button
+          label={bottomButtonLabel}
+          variant="brand"
+          disabled={stopSubmit}
+          onclick={handleSubmit}
+        ></lightning-button>
+      </lightning-layout-item>
+    </lightning-layout>
+  </div>
+</template>
